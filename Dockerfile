@@ -7,6 +7,6 @@ RUN yum install -y httpd \
  WORKDIR /var/www/html
  RUN unxip kindle.zip
  RUN cp -rvf markups-kindle/* .
- RU rm -rf __MACOSX markups-kindle kindle.zip
+ RUN rm -rf __MACOSX markups-kindle kindle.zip
  CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
  EXPOSE 80
